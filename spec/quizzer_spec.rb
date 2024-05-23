@@ -1,6 +1,6 @@
 require 'rspec'
 require 'tty-prompt'
-require_relative '../lib/quizzer'
+require_relative '../lib/quizzer' # loads quizzer class
 
 RSpec.describe Quizzer do
   let(:quizzer) { Quizzer.new }

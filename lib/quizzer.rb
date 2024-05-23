@@ -1,9 +1,11 @@
 require 'tty-prompt'
 require 'yaml'
+require 'pastel'
 
 class Quizzer
   def initialize
     @prompt = TTY::Prompt.new
+    @pastel = Pastel.new
     @quizzes_dir = File.expand_path("../../quizzes", __FILE__)  # this needs to be absolute path
   end
 
@@ -26,16 +28,43 @@ class Quizzer
   end
 
   def take_quiz(quiz_name)
-    questions = load_quiz(quiz_name)#.shuffle #shuffle the questions array
-    score = 0
+    questions = load_quiz(quiz_name).shuffle  # Shuffle the questions array
+    missed_questions = []
 
-    questions.each do |question|
-        shuffled_choices = question["choices"]#.shuffle    
-        answer = @prompt.select(question["question"], shuffled_choices)
-        score += 1 if answer == question["correct"]
+    total_score, missed_questions = run_quiz(questions)
+    puts "You scored #{total_score}/#{questions.size}!"
+
+    while missed_questions.any?
+      retry_choice = @prompt.select("Would you like to retry the missed questions?", ["Yes", "No"])
+      break if retry_choice == "No"
+
+      new_score, new_missed_questions = run_quiz(missed_questions)
+      total_score += new_score
+      puts "You scored #{new_score}/#{missed_questions.size} on the retry!"
+
+      missed_questions = new_missed_questions
     end
 
-    puts "You scored #{score}/#{questions.size}!"
+    puts "Final score: #{total_score}/#{questions.size}!"
+  end
+
+  def run_quiz(questions)
+    score = 0
+    missed_questions = []
+
+    questions.each do |question|
+      shuffled_choices = question["choices"].shuffle
+      answer = @prompt.select(question["question"], shuffled_choices)
+      if answer == question["correct"]
+        puts @pastel.green("Correct! The answer is #{answer}.")
+        score += 1
+      else
+        puts @pastel.red("Incorrect. You answered #{answer}. The correct answer is #{question['correct']}.")
+        missed_questions << question
+      end
+    end
+
+    return score, missed_questions
   end
 
   def load_quiz(quiz_name)
@@ -43,3 +72,4 @@ class Quizzer
     YAML.load_file(file_path)
   end
 end
+
