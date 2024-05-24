@@ -19,7 +19,7 @@ class Quizzer
         puts "No quizzes found in the quizzes directory."
         return
       end
-      quiz_name = @prompt.select("Which quiz would you like to take?(Press 'q' to quit)", quiz_names)
+      quiz_name = @prompt.select("Which quiz would you like to take? (Press 'q' to quit)", quiz_names)
       
       break if quiz_name == 'q' || quiz_name.nil?
       take_quiz(quiz_name)
@@ -30,14 +30,16 @@ class Quizzer
 
   def list_quizzes_with_scores
     quizzes = Dir["#{@quizzes_dir}/*.yaml"].map { |file| File.basename(file, ".yaml") }
-    quizzes.map do |quiz|
+    quizzes_with_scores = quizzes.map do |quiz|
       score_display = @scores[quiz] ? " (Score: #{@scores[quiz]})" : ""
       "#{quiz}#{score_display}"
     end
-    quizzes<<'q'
+    quizzes_with_scores << 'q'  # Add the 'q' option to the quizzes list
+    quizzes_with_scores
   end
 
   def take_quiz(quiz_name)
+    return if quiz_name == 'q'
     quiz_name = quiz_name.split(" (").first  # Remove score display
     questions = load_quiz(quiz_name).shuffle  # Shuffle the questions array
     missed_questions = []
