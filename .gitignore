@@ -13,4 +13,3 @@
 *.tmp.*
 .DS_Store
 scores.yaml
-.gitignore
