@@ -1,0 +1,15 @@
+*.log
+*.tmp
+*.swp
+*.bak
+*.backup
+*.old
+*.orig
+*.save
+*.swx
+*~
+*#
+.*.un~
+*.tmp.*
+.DS_Store
+scores.yaml

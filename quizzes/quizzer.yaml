@@ -1,0 +1,120 @@
+questions:
+  - question: "What is the primary role of the `TTY::Prompt` library in the `Quizzer` class?"
+    choices:
+      - "To handle file operations"
+      - "To manage user input through interactive prompts"
+      - "To colorize the terminal output"
+      - "To shuffle the quiz questions"
+    correct: "To manage user input through interactive prompts"
+
+  - question: "Why does the `Quizzer` class use `File.expand_path` for `@quizzes_dir` and `SCORES_FILE`?"
+    choices:
+      - "To ensure the paths are relative"
+      - "To avoid hardcoding the full paths in the code"
+      - "To convert relative paths to absolute paths for file operations"
+      - "To handle different operating systems"
+    correct: "To convert relative paths to absolute paths for file operations"
+
+  - question: "How does the `Quizzer` class ensure that the quiz questions and choices are presented in random order?"
+    choices:
+      - "By using the `sample` method"
+      - "By using the `sort` method with a random comparator"
+      - "By using the `shuffle` method on arrays"
+      - "By loading the questions in a different order each time"
+    correct: "By using the `shuffle` method on arrays"
+
+  - question: "In the context of the `Quizzer` class, what would be a potential issue if the scores were not saved to a file?"
+    choices:
+      - "The program would run slower"
+      - "The user's progress would not be persistent across sessions"
+      - "The quizzes would not load correctly"
+      - "The questions would not shuffle"
+    correct: "The user's progress would not be persistent across sessions"
+
+  - question: "Why is the `@scores` instance variable initialized by calling the `load_scores` method in the `initialize` method?"
+    choices:
+      - "To reset the scores every time the program runs"
+      - "To load existing scores from a file into memory for use during the session"
+      - "To prevent scores from being saved"
+      - "To shuffle the scores"
+    correct: "To load existing scores from a file into memory for use during the session"
+
+  - question: "How does the `Quizzer` class handle the user's selection to quit the program?"
+    choices:
+      - "It throws an exception"
+      - "It breaks the loop in the `start` method"
+      - "It restarts the program"
+      - "It logs the user out"
+    correct: "It breaks the loop in the `start` method"
+
+  - question: "What would happen if the `@pastel` instance variable were removed from the `Quizzer` class?"
+    choices:
+      - "The program would not be able to format and colorize the output"
+      - "The quizzes would not load"
+      - "The scores would not save correctly"
+      - "The questions would not shuffle"
+    correct: "The program would not be able to format and colorize the output"
+
+  - question: "What is the significance of the `return score, missed_questions` statement in the `run_quiz` method?"
+    choices:
+      - "It returns the total number of questions"
+      - "It exits the method early"
+      - "It provides both the score and the list of missed questions to the caller"
+      - "It saves the quiz results to a file"
+    correct: "It provides both the score and the list of missed questions to the caller"
+
+  - question: "What does the `if File.exist?(SCORES_FILE)` condition check for in the `load_scores` method?"
+    choices:
+      - "If the scores are valid"
+      - "If the scores have been modified"
+      - "If the scores file exists before attempting to load it"
+      - "If the scores file is empty"
+    correct: "If the scores file exists before attempting to load it"
+
+  - question: "How does the `Quizzer` class ensure that the final score includes only the initial attempt and not retries?"
+    choices:
+      - "By resetting the score before each retry"
+      - "By only updating the score in the `@scores` hash after the first attempt"
+      - "By not allowing retries"
+      - "By saving the score to a different file for retries"
+    correct: "By only updating the score in the `@scores` hash after the first attempt"
+
+  - question: "Why does the `take_quiz` method call the `save_scores` method after the initial attempt?"
+    choices:
+      - "To save the scores to a file for persistence"
+      - "To reset the scores"
+      - "To shuffle the questions"
+      - "To display the score to the user"
+    correct: "To save the scores to a file for persistence"
+
+  - question: "In the `take_quiz` method, what is the purpose of the `missed_questions` array?"
+    choices:
+      - "To store the questions that were answered correctly"
+      - "To store the questions that were answered incorrectly"
+      - "To store the scores"
+      - "To store the user's input"
+    correct: "To store the questions that were answered incorrectly"
+
+  - question: "What is the role of the `split` method in the line `quiz_name = quiz_name.split(' (').first` in the `take_quiz` method?"
+    choices:
+      - "To separate the quiz name from its score display"
+      - "To remove all spaces from the quiz name"
+      - "To convert the quiz name to uppercase"
+      - "To merge the quiz name with the score display"
+    correct: "To separate the quiz name from its score display"
+
+  - question: "What would be a consequence of removing the `shuffle` call on the `questions` array in the `take_quiz` method?"
+    choices:
+      - "The questions would be asked in the same order every time"
+      - "The questions would not load"
+      - "The program would crash"
+      - "The questions would be duplicated"
+    correct: "The questions would be asked in the same order every time"
+
+  - question: "How does the `Quizzer` class handle the user's choice to retry missed questions?"
+    choices:
+      - "By immediately restarting the quiz"
+      - "By storing missed questions in an array and prompting the user to retry them"
+      - "By saving the missed questions to a file"
+      - "By ignoring the user's choice"
+    correct: "By storing missed questions in an array and prompting the user to retry them"
