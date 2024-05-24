@@ -1,0 +1,253 @@
+# Chapter 11: Systems
+
+- question: "What is the importance of designing systems with a clear separation of concerns in a Ruby on Rails application?"
+  choices:
+    - "To reduce the number of files in the project"
+    - "To make the system easier to understand, maintain, and scale"
+    - "To make the system run faster"
+    - "To use more resources"
+  correct: "To make the system easier to understand, maintain, and scale"
+
+- question: "How can you ensure that different parts of a system can be developed and tested independently?"
+  choices:
+    - "By tightly coupling components"
+    - "By defining clear interfaces and boundaries between components"
+    - "By using global variables"
+    - "By combining all components into a single file"
+  correct: "By defining clear interfaces and boundaries between components"
+
+- question: "What is the role of automated tests in maintaining system integrity?"
+  choices:
+    - "To speed up the system"
+    - "To ensure that changes in one part of the system do not break other parts"
+    - "To reduce the number of lines of code"
+    - "To make the system use less memory"
+  correct: "To ensure that changes in one part of the system do not break other parts"
+
+- question: "How should you handle configuration settings in a Rails application to keep the system maintainable?"
+  choices:
+    - "Hardcode all configuration settings in the application"
+    - "Use environment variables and configuration files"
+    - "Store configuration settings in the database"
+    - "Avoid using configuration settings"
+  correct: "Use environment variables and configuration files"
+
+- question: "What is the benefit of continuous integration (CI) in system development?"
+  choices:
+    - "To increase the size of the codebase"
+    - "To automatically build and test the system with each change"
+    - "To reduce the execution speed of the application"
+    - "To minimize the number of tests needed"
+  correct: "To automatically build and test the system with each change"
+
+
+# Chapter 12: Emergence
+
+- question: "What principle of emergent design emphasizes the importance of simplicity in a Ruby application?"
+  choices:
+    - "YAGNI (You Aren't Gonna Need It)"
+    - "KISS (Keep It Simple, Stupid)"
+    - "DRY (Don't Repeat Yourself)"
+    - "TDD (Test-Driven Development)"
+  correct: "KISS (Keep It Simple, Stupid)"
+
+- question: "How does continuous refactoring contribute to emergent design in a Ruby on Rails application?"
+  choices:
+    - "By adding more features to the application"
+    - "By constantly improving the codebase and addressing design flaws"
+    - "By reducing the number of tests needed"
+    - "By increasing the complexity of the code"
+  correct: "By constantly improving the codebase and addressing design flaws"
+
+- question: "Why is feedback from tests crucial in the process of emergent design?"
+  choices:
+    - "It helps in identifying performance bottlenecks"
+    - "It provides immediate validation of design changes"
+    - "It reduces the codebase size"
+    - "It makes the application run faster"
+  correct: "It provides immediate validation of design changes"
+
+- question: "What role do clean and expressive code play in emergent design?"
+  choices:
+    - "They make the code run faster"
+    - "They ensure that the code is easy to understand and modify"
+    - "They reduce the need for testing"
+    - "They increase the number of lines of code"
+  correct: "They ensure that the code is easy to understand and modify"
+
+- question: "How can you apply the concept of emergent design when adding new features to a Ruby application?"
+  choices:
+    - "By planning all features in detail upfront"
+    - "By incrementally adding features and refactoring the code continuously"
+    - "By avoiding changes to the existing codebase"
+    - "By writing extensive documentation before coding"
+  correct: "By incrementally adding features and refactoring the code continuously"
+
+# Chapter 13:Concurrency
+
+- question: "What is a key challenge of adding concurrency to a Ruby on Rails application?"
+  choices:
+    - "Increased performance"
+    - "Handling race conditions and ensuring thread safety"
+    - "Simplifying the codebase"
+    - "Reducing memory usage"
+  correct: "Handling race conditions and ensuring thread safety"
+
+- question: "What is a practical approach to managing shared resources in a concurrent Ruby application?"
+  choices:
+    - "Using global variables"
+    - "Using thread-safe data structures or synchronization mechanisms like Mutex"
+    - "Avoiding shared resources"
+    - "Hardcoding resource access"
+  correct: "Using thread-safe data structures or synchronization mechanisms like Mutex"
+
+- question: "Why is it important to minimize the scope of locks in a concurrent program?"
+  choices:
+    - "To make the code easier to read"
+    - "To reduce contention and improve performance"
+    - "To avoid syntax errors"
+    - "To increase memory usage"
+  correct: "To reduce contention and improve performance"
+
+- question: "How can you test for concurrency issues in a Ruby on Rails application?"
+  choices:
+    - "By writing unit tests"
+    - "By using stress tests and running the application in a multi-threaded environment"
+    - "By using manual testing only"
+    - "By avoiding testing for concurrency"
+  correct: "By using stress tests and running the application in a multi-threaded environment"
+
+- question: "What is the benefit of using immutable objects in a concurrent Ruby application?"
+  choices:
+    - "They are easier to modify"
+    - "They eliminate the need for synchronization"
+    - "They use less memory"
+    - "They increase execution speed"
+  correct: "They eliminate the need for synchronization"
+
+
+# Chapter 14: Succesive Refinement
+
+- question: "What is the goal of successive refinement in software development?"
+  choices:
+    - "To implement features all at once"
+    - "To incrementally improve the design and implementation of the code"
+    - "To reduce the number of lines of code"
+    - "To avoid refactoring"
+  correct: "To incrementally improve the design and implementation of the code"
+
+- question: "How can you apply successive refinement to a large method in a Ruby application?"
+  choices:
+    - "By breaking it down into smaller, more focused methods"
+    - "By adding more comments"
+    - "By increasing the number of parameters"
+    - "By combining it with other methods"
+  correct: "By breaking it down into smaller, more focused methods"
+
+- question: "What is an advantage of using iterative development and refinement?"
+  choices:
+    - "It reduces the need for testing"
+    - "It allows for continuous feedback and improvement"
+    - "It speeds up the development process significantly"
+    - "It eliminates the need for documentation"
+  correct: "It allows for continuous feedback and improvement"
+
+- question: "Why is it important to continually refactor and refine code?"
+  choices:
+    - "To add more features quickly"
+    - "To keep the codebase clean, understandable, and maintainable"
+    - "To make the code run faster"
+    - "To increase the complexity of the code"
+  correct: "To keep the codebase clean, understandable, and maintainable"
+
+- question: "How can unit tests support the process of successive refinement?"
+  choices:
+    - "By reducing the need for code changes"
+    - "By ensuring that refactoring does not break existing functionality"
+    - "By making the code harder to read"
+    - "By increasing the number of lines of code"
+  correct: "By ensuring that refactoring does not break existing functionality"
+
+# Chapter 16: REFACTORING serialdate
+
+- question: "What is the primary goal of refactoring in a Ruby on Rails application?"
+  choices:
+    - "To add new features"
+    - "To improve the structure and readability of the existing code without changing its behavior"
+    - "To increase execution speed"
+    - "To reduce memory usage"
+  correct: "To improve the structure and readability of the existing code without changing its behavior"
+
+- question: "How can you identify parts of the code that need refactoring?"
+  choices:
+    - "By looking for code smells and areas of high complexity"
+    - "By counting the number of lines in each method"
+    - "By checking for comments"
+    - "By measuring the performance of the application"
+  correct: "By looking for code smells and areas of high complexity"
+
+- question: "What is a common sign that a method needs to be refactored?"
+  choices:
+    - "The method is less than 10 lines long"
+    - "The method has too many responsibilities or is overly complex"
+    - "The method is private"
+    - "The method has no parameters"
+  correct: "The method has too many responsibilities or is overly complex"
+
+- question: "Why is it important to have a suite of automated tests before starting a refactoring effort?"
+  choices:
+    - "To ensure the code runs faster"
+    - "To provide a safety net that verifies the behavior remains unchanged"
+    - "To reduce the number of lines of code"
+    - "To document the code"
+  correct: "To provide a safety net that verifies the behavior remains unchanged"
+
+- question: "How can you refactor a long method that performs several tasks?"
+  choices:
+    - "By breaking it into smaller methods, each handling a specific task"
+    - "By adding more comments"
+    - "By increasing the number of parameters"
+    - "By combining it with other methods"
+  correct: "By breaking it into smaller methods, each handling a specific task"
+
+# Chapter 17: Smells and heuristics
+
+- question: "What is a 'code smell' and why is it important to identify them?"
+  choices:
+    - "An indicator of a potential problem in the code that may require refactoring"
+    - "A feature that makes the code run faster"
+    - "A way to optimize memory usage"
+    - "A technique to document the code"
+  correct: "An indicator of a potential problem in the code that may require refactoring"
+
+- question: "How can long methods be a sign of poor code quality?"
+  choices:
+    - "They are always slower to execute"
+    - "They often have too many responsibilities and are harder to understand"
+    - "They use more memory"
+    - "They increase the file size"
+  correct: "They often have too many responsibilities and are harder to understand"
+
+- question: "What is the problem with having a large number of parameters in a method?"
+  choices:
+    - "It makes the method faster"
+    - "It complicates the method signature and increases the chance of errors"
+    - "It reduces memory usage"
+    - "It makes the method easier to understand"
+  correct: "It complicates the method signature and increases the chance of errors"
+
+- question: "Why should you avoid using magic numbers in your code?"
+  choices:
+    - "They make the code run slower"
+    - "They make the code harder to understand and maintain"
+    - "They are faster to type"
+    - "They are easier to debug"
+  correct: "They make the code harder to understand and maintain"
+
+- question: "What is the benefit of identifying and eliminating duplicated code?"
+  choices:
+    - "It reduces the code size"
+    - "It makes the code easier to maintain and reduces the risk of bugs"
+    - "It increases the execution speed"
+    - "It makes the code harder to understand"
+  correct: "It makes the code easier to maintain and reduces the risk of bugs"

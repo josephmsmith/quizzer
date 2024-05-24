@@ -1,0 +1,433 @@
+# Please note these questions are geared around real world application and related to ruby/rails specific
+# Chapter 1
+
+- question: "In Chapter 1, which metaphor is used to describe the state of the codebase in a typical project?"
+  choices:
+    - "A well-oiled machine"
+    - "A tangled web"
+    - "A broken window"
+    - "A clear river"
+  correct: "A broken window"
+
+- question: "What role do unit tests play in writing clean code, as discussed in Chapter 1?"
+  choices:
+    - "They are optional and can be skipped"
+    - "They help ensure the code works as intended and facilitate refactoring"
+    - "They slow down the development process"
+    - "They are only necessary for large projects"
+  correct: "They help ensure the code works as intended and facilitate refactoring"
+
+- question: "According to Chapter 1, what is the benefit of writing small functions?"
+  choices:
+    - "They are faster to write"
+    - "They are easier to test and understand"
+    - "They use less memory"
+    - "They require fewer comments"
+  correct: "They are easier to test and understand"
+
+- question: "In Chapter 1, what is mentioned as a key practice for maintaining clean code over time?"
+  choices:
+    - "Writing extensive documentation"
+    - "Regularly refactoring the codebase"
+    - "Using the latest programming language features"
+    - "Minimizing collaboration between developers"
+  correct: "Regularly refactoring the codebase"
+
+- question: "What does Chapter 1 suggest about naming conventions in clean code?"
+  choices:
+    - "Names should be short and cryptic"
+    - "Names should be descriptive and meaningful"
+    - "Names should be randomly chosen"
+    - "Names are not important as long as the code works"
+  correct: "Names should be descriptive and meaningful"
+
+# Chapter 2
+
+- question: "What is the main principle of writing functions according to Clean Code?"
+  choices:
+    - "Functions should be long and comprehensive"
+    - "Functions should be short and do one thing well"
+    - "Functions should handle multiple tasks"
+    - "Functions should have many parameters"
+  correct: "Functions should be short and do one thing well"
+
+- question: "What is a key benefit of using descriptive function names?"
+  choices:
+    - "They make the code easier to debug"
+    - "They make the code faster"
+    - "They make the code self-documenting"
+    - "They reduce the need for comments"
+  correct: "They make the code self-documenting"
+
+- question: "Which of the following best describes the Single Responsibility Principle (SRP)?"
+  choices:
+    - "A class should have multiple reasons to change"
+    - "A class should only have one reason to change"
+    - "A function should only call other functions"
+    - "A module should have multiple purposes"
+  correct: "A class should only have one reason to change"
+
+- question: "What is suggested about the use of switch statements?"
+  choices:
+    - "They should be used frequently to handle multiple cases"
+    - "They should be encapsulated and used sparingly"
+    - "They should replace if-else statements"
+    - "They should be avoided altogether"
+  correct: "They should be encapsulated and used sparingly"
+
+- question: "What is an effective way to handle error conditions in functions?"
+  choices:
+    - "Return error codes"
+    - "Throw exceptions"
+    - "Use global variables"
+    - "Ignore errors"
+  correct: "Throw exceptions"
+
+- question: "What is the recommended way to ensure that functions are performing only one task?"
+  choices:
+    - "Ensure that the function contains no more than 10 lines of code"
+    - "Ensure that the function's name clearly describes a single responsibility"
+    - "Ensure that the function has multiple parameters"
+    - "Ensure that the function has no return value"
+  correct: "Ensure that the function's name clearly describes a single responsibility"
+
+- question: "What is suggested about the placement of function definitions in a source file?"
+  choices:
+    - "Place the most important functions at the top"
+    - "Place functions in alphabetical order"
+    - "Place related functions close together"
+    - "Place functions randomly"
+  correct: "Place related functions close together"
+
+# Chapter 3: FUNCTIONS
+- question: "In Ruby or Rails applications, why is it crucial to keep functions short and focused on a single task?"
+  choices:
+    - "To reduce the number of lines in the codebase"
+    - "To ensure that each function is easy to test, understand, and maintain"
+    - "To increase execution speed"
+    - "To follow Ruby's syntax rules"
+  correct: "To ensure that each function is easy to test, understand, and maintain"
+
+- question: "What is a practical way to handle error conditions in a function without making it overly complex?"
+  choices:
+    - "Use multiple nested if-else statements"
+    - "Return error codes and handle them in the caller"
+    - "Throw exceptions and let them propagate to a global handler"
+    - "Use guard clauses to handle errors early and exit"
+  correct: "Use guard clauses to handle errors early and exit"
+
+- question: "How should you structure a function that needs to perform multiple related tasks in a Ruby on Rails application?"
+  choices:
+    - "Combine all tasks into a single method for simplicity"
+    - "Create separate helper methods for each task and call them from the main function"
+    - "Use a single method with comments to separate each task"
+    - "Write a long method with multiple return statements"
+  correct: "Create separate helper methods for each task and call them from the main function"
+
+- question: "Why is it important to use descriptive names for functions in a Ruby application?"
+  choices:
+    - "To adhere to Ruby's naming conventions"
+    - "To make the code self-explanatory and reduce the need for comments"
+    - "To make the function names shorter"
+    - "To improve the performance of the application"
+  correct: "To make the code self-explanatory and reduce the need for comments"
+
+- question: "What is the best practice for managing the number of parameters in a function to maintain readability and simplicity?"
+  choices:
+    - "Use as many parameters as needed for flexibility"
+    - "Group related parameters into objects or hashes"
+    - "Limit functions to a maximum of two parameters"
+    - "Use global variables instead of parameters"
+  correct: "Group related parameters into objects or hashes"
+
+
+# Chapter 4: COMMENTS
+- question: "Why should comments be considered a last resort for explaining code in a Ruby application?"
+  choices:
+    - "Comments are often ignored by other developers"
+    - "Comments can become outdated and misleading"
+    - "Comments slow down the execution of the code"
+    - "Comments make the code longer"
+  correct: "Comments can become outdated and misleading"
+
+- question: "What is a better alternative to using comments for explaining the functionality of a method in Ruby?"
+  choices:
+    - "Writing a detailed comment block above the method"
+    - "Using descriptive method and variable names"
+    - "Including a separate documentation file"
+    - "Using inline comments throughout the method"
+  correct: "Using descriptive method and variable names"
+
+- question: "In what situation might a comment be considered acceptable in a Ruby on Rails application?"
+  choices:
+    - "When explaining why a certain approach was taken"
+    - "When describing the syntax of a language feature"
+    - "When adding humorous notes"
+    - "When listing all the methods in a class"
+  correct: "When explaining why a certain approach was taken"
+
+- question: "What type of comment should be avoided because it merely repeats what the code does?"
+  choices:
+    - "Explanation comments"
+    - "Clarification comments"
+    - "Redundant comments"
+    - "Warning comments"
+  correct: "Redundant comments"
+
+- question: "How can you ensure that comments in your Ruby code remain useful and accurate?"
+  choices:
+    - "By writing comments in all caps"
+    - "By regularly reviewing and updating comments as the code evolves"
+    - "By placing comments at the end of each line"
+    - "By writing very detailed comments for every method"
+  correct: "By regularly reviewing and updating comments as the code evolves"
+
+# Chapter 5: FORMATTING
+
+- question: "Why is consistent formatting crucial in a Ruby on Rails application?"
+  choices:
+    - "To make the code look aesthetically pleasing"
+    - "To improve readability and maintainability across the team"
+    - "To ensure the code runs faster"
+    - "To reduce the number of lines of code"
+  correct: "To improve readability and maintainability across the team"
+
+- question: "What is a practical approach to maintaining proper indentation in a Rails project?"
+  choices:
+    - "Using a linter or formatter like RuboCop to enforce indentation rules"
+    - "Relying on individual developers to maintain their own style"
+    - "Ignoring indentation to focus on functionality"
+    - "Only indenting nested blocks of code"
+  correct: "Using a linter or formatter like RuboCop to enforce indentation rules"
+
+- question: "How should method chains be formatted to enhance readability in Ruby?"
+  choices:
+    - "Place each method call on a new line"
+    - "Write the entire chain on a single line"
+    - "Use comments between each method call"
+    - "Avoid using method chains"
+  correct: "Place each method call on a new line"
+
+- question: "What is the recommended way to handle long lines of code in a Ruby application?"
+  choices:
+    - "Break them into multiple lines at logical break points"
+    - "Allow them to extend beyond the standard line length"
+    - "Compress the code to fit on one line"
+    - "Ignore the issue unless it causes errors"
+  correct: "Break them into multiple lines at logical break points"
+
+- question: "Why should related lines of code be grouped together in a Ruby on Rails controller?"
+  choices:
+    - "To improve the aesthetic of the code"
+    - "To enhance readability and ensure logical flow"
+    - "To reduce the file size"
+    - "To ensure they are executed in sequence"
+  correct: "To enhance readability and ensure logical flow"
+
+
+# Chapter 6: OBJECTS AND DATA STRUCTURES 
+- question: "Why is it important to prefer objects over data structures in a Ruby on Rails application?"
+  choices:
+    - "Objects can encapsulate behavior along with data, promoting modularity and reuse"
+    - "Objects use less memory than data structures"
+    - "Objects are easier to serialize"
+    - "Objects are inherently faster than data structures"
+  correct: "Objects can encapsulate behavior along with data, promoting modularity and reuse"
+
+- question: "How can you ensure that an object’s internal state is only modified through its methods in a Ruby application?"
+  choices:
+    - "By using global variables"
+    - "By using getter and setter methods"
+    - "By making all instance variables public"
+    - "By directly accessing instance variables from other classes"
+  correct: "By using getter and setter methods"
+
+- question: "What is a key advantage of using data structures over objects in some scenarios?"
+  choices:
+    - "Data structures allow direct access to their fields, making them simpler and faster for certain operations"
+    - "Data structures are always more secure"
+    - "Data structures can contain more data"
+    - "Data structures are more compatible with databases"
+  correct: "Data structures allow direct access to their fields, making them simpler and faster for certain operations"
+
+- question: "In the context of a Rails application, when might it be more appropriate to use a data structure rather than an object?"
+  choices:
+    - "When performance is critical and you need direct access to the data"
+    - "When you want to encapsulate complex business logic"
+    - "When you need to enforce data integrity"
+    - "When you want to use polymorphism"
+  correct: "When performance is critical and you need direct access to the data"
+
+- question: "How does encapsulation contribute to the robustness of a Ruby on Rails application?"
+  choices:
+    - "By allowing direct access to object properties"
+    - "By hiding the internal state of objects and exposing behavior through methods"
+    - "By reducing the amount of code needed"
+    - "By making the application run faster"
+  correct: "By hiding the internal state of objects and exposing behavior through methods"
+
+# Chapter 7: ERROR HANDLING
+- question: "What is the primary benefit of using exceptions over error codes in a Ruby application?"
+  choices:
+    - "Exceptions are faster to execute"
+    - "Exceptions can be propagated up the call stack, allowing centralized error handling"
+    - "Exceptions use less memory"
+    - "Exceptions are easier to debug"
+  correct: "Exceptions can be propagated up the call stack, allowing centralized error handling"
+
+- question: "How should you handle exceptions in a Ruby on Rails controller?"
+  choices:
+    - "Rescue exceptions at the top level and provide a user-friendly error message"
+    - "Let the exceptions propagate to the views"
+    - "Ignore exceptions to keep the code clean"
+    - "Log exceptions but do not rescue them"
+  correct: "Rescue exceptions at the top level and provide a user-friendly error message"
+
+- question: "What is a guard clause and how does it help with error handling?"
+  choices:
+    - "A method that guards sensitive data"
+    - "A conditional statement that exits a method early to handle errors"
+    - "A security feature in Rails"
+    - "A testing strategy"
+  correct: "A conditional statement that exits a method early to handle errors"
+
+- question: "When is it appropriate to use a custom exception in Ruby?"
+  choices:
+    - "When you need to handle a very specific error condition that isn't covered by standard exceptions"
+    - "When you want to catch all types of errors"
+    - "When you need to improve performance"
+    - "When you want to reduce the number of lines of code"
+  correct: "When you need to handle a very specific error condition that isn't covered by standard exceptions"
+
+- question: "How can you ensure that your error messages are helpful to developers in a Ruby application?"
+  choices:
+    - "By keeping error messages vague"
+    - "By providing detailed and context-specific information in the error messages"
+    - "By using generic error messages"
+    - "By logging error messages to a file only"
+  correct: "By providing detailed and context-specific information in the error messages"
+
+# Chapter 8: Boundaries
+
+- question: "Why is it important to define clear boundaries between different parts of a Ruby on Rails application?"
+  choices:
+    - "To reduce the size of the codebase"
+    - "To ensure that different parts of the application can be developed and tested independently"
+    - "To make the application run faster"
+    - "To use more resources"
+  correct: "To ensure that different parts of the application can be developed and tested independently"
+
+- question: "What is a common way to manage dependencies between different parts of a Ruby application?"
+  choices:
+    - "Using global variables"
+    - "Using dependency injection"
+    - "Hardcoding dependencies"
+    - "Avoiding dependencies"
+  correct: "Using dependency injection"
+
+- question: "How can you isolate third-party libraries in a Ruby application to minimize impact on the codebase?"
+  choices:
+    - "By using the library directly in the main codebase"
+    - "By wrapping the library in a custom class or module"
+    - "By copying the library code into your project"
+    - "By avoiding third-party libraries"
+  correct: "By wrapping the library in a custom class or module"
+
+- question: "Why should you avoid directly coupling your application code to external libraries?"
+  choices:
+    - "It makes the code run slower"
+    - "It increases the complexity of the code"
+    - "It makes future updates and replacements easier"
+    - "It reduces the number of lines of code"
+  correct: "It makes future updates and replacements easier"
+
+- question: "What technique can you use to ensure that changes in external libraries do not break your application?"
+  choices:
+    - "Use the latest version of the library"
+    - "Write integration tests that cover the usage of the external library"
+    - "Avoid using external libraries"
+    - "Directly modify the library code"
+  correct: "Write integration tests that cover the usage of the external library"
+
+
+# Chapter 9: UNIT TESTS
+- question: "What is the primary purpose of unit tests in a Ruby on Rails application?"
+  choices:
+    - "To test the entire system as a whole"
+    - "To test individual units of code in isolation to ensure they work as expected"
+    - "To replace manual testing"
+    - "To speed up the development process"
+  correct: "To test individual units of code in isolation to ensure they work as expected"
+
+- question: "How should unit tests be structured to provide the most benefit?"
+  choices:
+    - "Unit tests should be complex and cover multiple functionalities"
+    - "Unit tests should be simple, focused, and cover one functionality at a time"
+    - "Unit tests should replace integration tests"
+    - "Unit tests should be written after the code is complete"
+  correct: "Unit tests should be simple, focused, and cover one functionality at a time"
+
+- question: "What is a common pitfall to avoid when writing unit tests for a Ruby application?"
+  choices:
+    - "Writing tests that are too simple"
+    - "Writing tests that are tightly coupled to the implementation details"
+    - "Writing too many tests"
+    - "Writing tests that do not use any assertions"
+  correct: "Writing tests that are tightly coupled to the implementation details"
+
+- question: "How can you ensure that your unit tests remain maintainable as the codebase evolves?"
+  choices:
+    - "By not updating the tests"
+    - "By regularly refactoring both the code and the tests"
+    - "By using hardcoded values"
+    - "By avoiding the use of test frameworks"
+  correct: "By regularly refactoring both the code and the tests"
+
+- question: "Why is it important to have a fast test suite in a Ruby on Rails application?"
+  choices:
+    - "To ensure that tests do not consume too much memory"
+    - "To encourage developers to run tests frequently"
+    - "To reduce the number of lines in the test files"
+    - "To make the application run faster"
+  correct: "To encourage developers to run tests frequently"
+
+# Chapter 10
+- question: "What is the Single Responsibility Principle (SRP) in the context of class design?"
+  choices:
+    - "A class should have only one reason to change"
+    - "A class should handle multiple responsibilities"
+    - "A class should inherit from multiple parent classes"
+    - "A class should have multiple public methods"
+  correct: "A class should have only one reason to change"
+
+- question: "How can you ensure that a class adheres to the Single Responsibility Principle in a Rails application?"
+  choices:
+    - "By combining multiple responsibilities into one class"
+    - "By splitting the class into multiple smaller classes, each handling a specific responsibility"
+    - "By using inheritance to add more responsibilities"
+    - "By adding more methods to the class"
+  correct: "By splitting the class into multiple smaller classes, each handling a specific responsibility"
+
+- question: "Why is it beneficial to keep classes small and focused in a Ruby application?"
+  choices:
+    - "To increase the code size"
+    - "To make the code easier to understand, test, and maintain"
+    - "To ensure the application runs faster"
+    - "To use more memory"
+  correct: "To make the code easier to understand, test, and maintain"
+
+- question: "What is a common way to manage dependencies between classes in Ruby?"
+  choices:
+    - "Using global variables"
+    - "Using dependency injection"
+    - "Hardcoding dependencies"
+    - "Avoiding dependencies"
+  correct: "Using dependency injection"
+
+- question: "How should you handle class inheritance to maintain clean code in a Ruby application?"
+  choices:
+    - "Favor composition over inheritance"
+    - "Use inheritance for all shared behavior"
+    - "Inherit from as many classes as possible"
+    - "Avoid using composition"
+  correct: "Favor composition over inheritance"

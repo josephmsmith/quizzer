@@ -1,0 +1,440 @@
+
+- question: "What is the most appropriate way to name a method that retrieves all active users in a Rails model?"
+  choices:
+    - "def get_all_active_users; User.where(active: true); end"
+    - "def fetchActiveUsers; User.where(active: true); end"
+    - "def active_users; User.where(active: true); end"
+    - "def allUsersActive; User.where(active: true); end"
+  correct: "def active_users; User.where(active: true); end"
+
+- question: "How should you structure a method in Ruby that processes user data and handles errors gracefully?"
+  choices:
+    - |
+      def process_user_data(user)
+        begin
+          # processing logic
+        rescue => e
+          # handle error
+        end
+      end
+    - |
+      def process_user_data(user)
+        # processing logic
+        # error handling
+      end
+    - |
+      def process_user_data(user)
+        # processing logic
+        rescue => e
+        # handle error
+      end
+    - |
+      def process_user_data(user)
+        begin
+          # processing logic
+        ensure
+          # handle error
+        end
+      end
+  correct: |
+    def process_user_data(user)
+      begin
+        # processing logic
+      rescue => e
+        # handle error
+      end
+    end
+
+- question: "What is the best way to add a comment explaining why a non-obvious approach was taken in a method?"
+  choices:
+    - |
+      def calculate_discount(order)
+        # Applying discount based on legacy business rule
+        # which cannot be modified due to legal reasons
+        # Discount logic here
+      end
+    - |
+      def calculate_discount(order)
+        # Applying discount
+        # Discount logic here
+      end
+    - |
+      def calculate_discount(order)
+        # Discount logic here
+      end
+    - |
+      def calculate_discount(order)
+        # Applying discount based on complex criteria
+        # Discount logic here
+      end
+  correct: |
+    def calculate_discount(order)
+      # Applying discount based on legacy business rule
+      # which cannot be modified due to legal reasons
+      # Discount logic here
+    end
+
+- question: "How should you format a long chain of method calls in Ruby for better readability?"
+  choices:
+    - |
+      user.update_attributes(name: 'New Name').save!
+    - |
+      user.update_attributes(name: 'New Name')
+        .save!
+    - |
+      user.update_attributes(
+        name: 'New Name'
+      ).save!
+    - |
+      user
+        .update_attributes(name: 'New Name')
+        .save!
+  correct: |
+    user
+      .update_attributes(name: 'New Name')
+      .save!
+
+- question: "What is a good practice for defining data structures that will be accessed concurrently in a Rails application?"
+  choices:
+    - |
+      class UserData
+        @@data = []
+
+        def self.add_data(item)
+          @@data << item
+        end
+      end
+    - |
+      class UserData
+        @data = []
+
+        def self.add_data(item)
+          @data << item
+        end
+      end
+    - |
+      class UserData
+        @data = Concurrent::Array.new
+
+        def self.add_data(item)
+          @data << item
+        end
+      end
+    - |
+      class UserData
+        @@data = Concurrent::Array.new
+
+        def self.add_data(item)
+          @@data << item
+        end
+      end
+  correct: |
+    class UserData
+      @data = Concurrent::Array.new
+
+      def self.add_data(item)
+        @data << item
+      end
+    end
+
+- question: "How should you handle error conditions in a Rails controller action to maintain clean code?"
+  choices:
+    - |
+      def create
+        @user = User.new(user_params)
+        if @user.save
+          redirect_to @user
+        else
+          render :new
+        end
+      rescue => e
+        logger.error e.message
+        render :new
+      end
+    - |
+      def create
+        @user = User.new(user_params)
+        if @user.save
+          redirect_to @user
+        else
+          render :new
+        end
+      end
+    - |
+      def create
+        begin
+          @user = User.new(user_params)
+          if @user.save
+            redirect_to @user
+          else
+            render :new
+          end
+        rescue => e
+          logger.error e.message
+          render :new
+        end
+      end
+    - |
+      def create
+        @user = User.new(user_params)
+        @user.save
+      end
+  correct: |
+    def create
+      @user = User.new(user_params)
+      if @user.save
+        redirect_to @user
+      else
+        render :new
+      end
+    rescue => e
+      logger.error e.message
+      render :new
+    end
+
+- question: "How can you ensure thread safety when accessing shared resources in a Rails application?"
+  choices:
+    - |
+      class SharedResource
+        def initialize
+          @resource = []
+        end
+
+        def add_item(item)
+          @resource << item
+        end
+      end
+    - |
+      class SharedResource
+        def initialize
+          @resource = []
+        end
+
+        def add_item(item)
+          @resource.push(item)
+        end
+      end
+    - |
+      class SharedResource
+        def initialize
+          @resource = []
+        end
+
+        def add_item(item)
+          @resource << item
+        end
+      end
+    - |
+      class SharedResource
+        def initialize
+          @resource = []
+          @mutex = Mutex.new
+        end
+
+        def add_item(item)
+          @mutex.synchronize do
+            @resource << item
+          end
+        end
+      end
+  correct: |
+    class SharedResource
+      def initialize
+        @resource = []
+        @mutex = Mutex.new
+      end
+
+      def add_item(item)
+        @mutex.synchronize do
+          @resource << item
+        end
+      end
+    end
+
+- question: "What is an effective way to ensure methods remain small and focused in a Ruby application?"
+  choices:
+    - |
+      def process_data(data)
+        # process data
+      end
+
+      def handle_errors(data)
+        # handle errors
+      end
+    - |
+      def process_data(data)
+        handle_errors(data)
+        # process data
+      end
+
+      def handle_errors(data)
+        # handle errors
+      end
+    - |
+      def process_data(data)
+        if data.valid?
+          # process data
+        else
+          handle_errors(data)
+        end
+      end
+
+      def handle_errors(data)
+        # handle errors
+      end
+    - |
+      def process_data(data)
+        if data.valid?
+          # process data
+        end
+      end
+
+      def handle_errors(data)
+        if !data.valid?
+          # handle errors
+        end
+      end
+  correct: |
+    def process_data(data)
+      if data.valid?
+        # process data
+      else
+        handle_errors(data)
+      end
+    end
+
+    def handle_errors(data)
+      # handle errors
+    end
+
+- question: "How can you implement a continuous integration (CI) pipeline to maintain code quality in a Rails application?"
+  choices:
+    - |
+      # .gitlab-ci.yml
+      stages:
+        - test
+
+      test:
+        stage: test
+        script:
+          - bundle install
+          - bundle exec rspec
+    - |
+      # .gitlab-ci.yml
+      stages:
+        - build
+        - test
+
+      build:
+        stage: build
+        script:
+          - bundle install
+
+      test:
+        stage: test
+        script:
+          - bundle exec rspec
+    - |
+      # .gitlab-ci.yml
+      stages:
+        - build
+        - deploy
+
+      build:
+        stage: build
+        script:
+          - bundle install
+
+      deploy:
+        stage: deploy
+        script:
+          - bundle exec cap production deploy
+    - |
+      # .gitlab-ci.yml
+      stages:
+        - test
+        - deploy
+
+      test:
+        stage: test
+        script:
+          - bundle exec rspec
+
+      deploy:
+        stage: deploy
+        script:
+          - bundle exec cap production deploy
+  correct: |
+    # .gitlab-ci.yml
+    stages:
+      - build
+      - test
+
+    build:
+      stage: build
+      script:
+        - bundle install
+
+    test:
+      stage: test
+      script:
+        - bundle exec rspec
+
+- question: "What is a common code smell that indicates a class in a Ruby application might be doing too much?"
+  choices:
+    - "The class name is too short"
+    - "The class has too many methods"
+    - "The class has no comments"
+    - "The class has too few instance variables"
+  correct: "The class has too many methods"
+
+- question: "What is an effective strategy for refactoring a method that has grown too large in a Rails controller?"
+  choices:
+    - |
+      def large_method
+        # large amount of logic
+      end
+    - |
+      def large_method
+        handle_part_one
+        handle_part_two
+      end
+
+      def handle_part_one
+        # logic for part one
+      end
+
+      def handle_part_two
+        # logic for part two
+      end
+    - |
+      def large_method
+        # large amount of logic
+        # more logic
+      end
+    - |
+      def large_method
+        part_one
+        part_two
+      end
+
+      def part_one
+        # logic for part one
+      end
+
+      def part_two
+        # logic for part two
+      end
+  correct: |
+    def large_method
+      handle_part_one
+      handle_part_two
+    end
+
+    def handle_part_one
+      # logic for part one
+    end
+
+    def handle_part_two
+      # logic for part two
+    end

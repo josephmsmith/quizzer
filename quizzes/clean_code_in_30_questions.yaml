@@ -1,0 +1,209 @@
+# 30 questions to sum up the book. Most realistic to real world problems.
+
+- question: "What is the main principle behind giving variables and functions meaningful names?"
+  choices:
+    - "To make the code shorter"
+    - "To make the code self-explanatory and easier to understand"
+    - "To ensure they are unique"
+    - "To make them easier to type"
+  correct: "To make the code self-explanatory and easier to understand"
+
+- question: "According to Clean Code, what is the ideal size of a function?"
+  choices:
+    - "50 lines"
+    - "10 lines"
+    - "No specific size, but should do one thing only"
+    - "100 lines"
+  correct: "No specific size, but should do one thing only"
+
+- question: "Why are comments considered a 'failure' in Clean Code?"
+  choices:
+    - "They clutter the code"
+    - "They are often outdated or incorrect"
+    - "They can replace proper naming and structure"
+    - "All of the above"
+  correct: "All of the above"
+
+- question: "What does Clean Code suggest about the use of vertical spacing in source code?"
+  choices:
+    - "It should be minimized"
+    - "It should be used to separate different concepts and logic sections"
+    - "It should be used after every line"
+    - "It is not important"
+  correct: "It should be used to separate different concepts and logic sections"
+
+- question: "How should error handling be managed according to Clean Code principles?"
+  choices:
+    - "By using error codes"
+    - "By throwing exceptions"
+    - "By ignoring errors"
+    - "By logging errors only"
+  correct: "By throwing exceptions"
+
+- question: "What is a data structure's primary characteristic according to Clean Code?"
+  choices:
+    - "It should expose behavior and hide data"
+    - "It should expose data and have no behavior"
+    - "It should be complex"
+    - "It should be immutable"
+  correct: "It should expose data and have no behavior"
+
+- question: "What is the role of unit tests in Clean Code?"
+  choices:
+    - "To test individual units of source code in isolation"
+    - "To test the entire system as a whole"
+    - "To replace the need for integration tests"
+    - "To ensure the code compiles"
+  correct: "To test individual units of source code in isolation"
+
+- question: "According to Clean Code, how should classes be structured?"
+  choices:
+    - "Classes should be large and all-encompassing"
+    - "Classes should be small and focused on a single responsibility"
+    - "Classes should contain as many methods as possible"
+    - "Classes should be named with acronyms"
+  correct: "Classes should be small and focused on a single responsibility"
+
+- question: "Why is consistent formatting important in Clean Code?"
+  choices:
+    - "To ensure all developers can read and understand the code quickly"
+    - "To make the code look aesthetically pleasing"
+    - "To increase code execution speed"
+    - "To reduce the file size"
+  correct: "To ensure all developers can read and understand the code quickly"
+
+- question: "What is a 'code smell' in the context of Clean Code?"
+  choices:
+    - "A bug in the code"
+    - "A hint that there might be a deeper problem in the system"
+    - "An optimization in the code"
+    - "A feature of the programming language"
+  correct: "A hint that there might be a deeper problem in the system"
+
+- question: "What does the principle of DRY (Don't Repeat Yourself) aim to achieve?"
+  choices:
+    - "Code should be duplicated across the system"
+    - "Code should be reused and redundancy minimized"
+    - "Comments should be repeated"
+    - "Unit tests should be repeated"
+  correct: "Code should be reused and redundancy minimized"
+
+- question: "What is the recommended approach to writing clean and maintainable error messages?"
+  choices:
+    - "Use generic error messages"
+    - "Provide context-specific error messages that help diagnose the problem"
+    - "Avoid error messages"
+    - "Use error codes only"
+  correct: "Provide context-specific error messages that help diagnose the problem"
+
+- question: "In Clean Code, what is the role of 'refactoring'?"
+  choices:
+    - "To add new features"
+    - "To improve the structure of the existing code without changing its behavior"
+    - "To optimize performance"
+    - "To remove all comments"
+  correct: "To improve the structure of the existing code without changing its behavior"
+
+- question: "How should functions handle input validation according to Clean Code?"
+  choices:
+    - "Functions should assume inputs are always correct"
+    - "Functions should validate inputs and handle invalid cases appropriately"
+    - "Functions should pass input validation to other functions"
+    - "Functions should not handle input validation"
+  correct: "Functions should validate inputs and handle invalid cases appropriately"
+
+- question: "What is the benefit of 'code reviews' in the context of Clean Code?"
+  choices:
+    - "To find and fix syntax errors"
+    - "To ensure code quality and share knowledge among team members"
+    - "To speed up the development process"
+    - "To replace the need for unit tests"
+  correct: "To ensure code quality and share knowledge among team members"
+
+- question: "Why should magic numbers be avoided in code?"
+  choices:
+    - "They make the code difficult to understand and maintain"
+    - "They increase the performance of the code"
+    - "They make the code run faster"
+    - "They reduce the need for comments"
+  correct: "They make the code difficult to understand and maintain"
+
+- question: "What is the primary advantage of using meaningful names for classes, methods, and variables?"
+  choices:
+    - "They make the code run faster"
+    - "They make the code self-documenting and easier to understand"
+    - "They reduce the size of the codebase"
+    - "They eliminate the need for testing"
+  correct: "They make the code self-documenting and easier to understand"
+
+- question: "How should complex conditional logic be handled to improve readability?"
+  choices:
+    - "By nesting multiple if-else statements"
+    - "By using descriptive method names to encapsulate the logic"
+    - "By using switch statements"
+    - "By writing detailed comments"
+  correct: "By using descriptive method names to encapsulate the logic"
+
+- question: "What is the purpose of having a consistent coding standard in a team?"
+  choices:
+    - "To ensure code is written in the same programming language"
+    - "To ensure all code looks similar, improving readability and maintainability"
+    - "To reduce the number of lines of code"
+    - "To increase code execution speed"
+  correct: "To ensure all code looks similar, improving readability and maintainability"
+
+- question: "What does Clean Code suggest about the use of global variables?"
+  choices:
+    - "Global variables should be used frequently"
+    - "Global variables should be minimized or avoided"
+    - "Global variables are preferred for shared data"
+    - "Global variables should replace local variables"
+  correct: "Global variables should be minimized or avoided"
+
+- question: "How should dependencies between classes be managed to adhere to Clean Code principles?"
+  choices:
+    - "By tightly coupling classes"
+    - "By loosely coupling classes through dependency injection"
+    - "By using global variables"
+    - "By hardcoding dependencies"
+  correct: "By loosely coupling classes through dependency injection"
+
+- question: "Why is it important to write automated tests for your code?"
+  choices:
+    - "To ensure that code changes do not introduce new bugs"
+    - "To replace the need for manual testing"
+    - "To increase code execution speed"
+    - "To reduce the size of the codebase"
+  correct: "To ensure that code changes do not introduce new bugs"
+
+- question: "What is the benefit of using version control systems like Git in software development?"
+  choices:
+    - "To increase the performance of the code"
+    - "To track changes, collaborate with others, and manage different versions of the code"
+    - "To reduce the number of lines of code"
+    - "To make the code run faster"
+  correct: "To track changes, collaborate with others, and manage different versions of the code"
+
+- question: "How does Clean Code recommend dealing with duplicated code?"
+  choices:
+    - "Duplicated code should be removed or refactored into reusable functions"
+    - "Duplicated code is acceptable if it works"
+    - "Duplicated code should be documented"
+    - "Duplicated code should be moved to a separate file"
+  correct: "Duplicated code should be removed or refactored into reusable functions"
+
+- question: "What is the role of comments in Clean Code?"
+  choices:
+    - "Comments should be used to explain complex logic"
+    - "Comments should be used sparingly and the code should be self-explanatory"
+    - "Comments should be used to document every line of code"
+    - "Comments should be avoided completely"
+  correct: "Comments should be used sparingly and the code should be self-explanatory"
+
+- question: "Why is it important to keep functions and methods short in Clean Code?"
+  choices:
+    - "Short functions are easier to read, understand, and maintain"
+    - "Short functions run faster"
+    - "Short functions reduce memory usage"
+    - "Short functions are easier to type"
+  correct: "Short functions are easier to read, understand, and maintain"
